@@ -1,0 +1,19 @@
+header {
+	margin: 1em auto;
+	max-width: 800px;
+	padding: 0 2em;
+}
+
+.header-logo {
+	margin: 0 1em;
+}
+
+.header-title {
+	font-size: 1.5em;
+	margin: 0;
+	white-space: nowrap;
+}
+
+.header-title:hover {
+	text-decoration: none;
+}

@@ -1,0 +1,69 @@
+:root {
+	--off-white: #fffbf6;
+	--off-black: #3d3d3d;
+	--red-type: #c8392b;
+}
+
+body {
+	background-color: var(--off-white);
+	color: var(--off-black);
+	font-family: 'Spectral', 'EB Garamond', 'Palatino Linotype', serif;
+	font-size: 1.08em;
+	font-weight: 500;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: inherit;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+article {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.gap-10 {
+	gap: 10px;
+}
+
+.gap-15 {
+	gap: 15px;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.woodcut {
+	border: 3px solid var(--off-black);
+	height: auto;
+	max-width: 100%;
+	overflow: hidden;
+	width: 100%;
+}

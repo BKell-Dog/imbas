@@ -1,0 +1,16 @@
+{
+  "title": "Imbas Hard Tech",
+  "description": "Hardware Outsourcing and Validation for Startups",
+  "author": "Will Kelly",
+  "language": "en",
+  "baseUrl": "https://imbashardtech.com",
+  "favicon": "/assets/awen-on-white.png",
+  "socialMediaCard": "",
+  "navLinks": [
+    { "text": "Home", "url": "/" },
+    { "text": "About", "url": "/about/" },
+    { "text": "Services", "url": "/services/" },
+    { "text": "Contact", "url": "/contact/" }
+  ],
+  "currentYear": 2026
+}

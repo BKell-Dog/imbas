@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="icon" type="image/svg+xml" href="{{ site.favicon }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.favicon }}">
+
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:image" content="{{ site.socialMediaCard }}">
+    <meta property="og:url" content="{{ site.url }}">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="{{ site.twitter_handle }}">
+    <meta name="twitter:title" content="{{ site.title }}">
+    <meta name="twitter:creator" content="{{ site.author }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image" content="{{ site.socialMediaCard }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800" rel="stylesheet">
+
+    {% block head %}{% endblock %}
+
+    {% if css %}
+    <link rel="stylesheet" href="/css/{{ css }}">
+    {% endif %}
+  </head>
+  <body>
+    {% block body %}
+    {{ content | safe }}
+    {% endblock %}
+
+    {% if script %}
+    <script src="/scripts/{{ script }}"></script>
+    {% endif %}
+  </body>
+</html>
