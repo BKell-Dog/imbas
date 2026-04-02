@@ -61,9 +61,19 @@ p {
 }
 
 .woodcut {
-	border: 3px solid var(--off-black);
+	width: 100%;
+  	height: 100%;
+  	object-fit: cover;
+
+  	transform-origin: center center;
+  	transform: scale(1.3) skewX(-8deg) skewY(3deg) translateY(23px);
+
+  	display: block;
+}
+
+.woodcut-frame {
+	border: 1.5px solid var(--off-black);
 	height: auto;
-	max-width: 100%;
 	overflow: hidden;
 	width: 100%;
 }

@@ -12,6 +12,11 @@ module.exports = function (eleventyConfig) {
     return fs.readFileSync(filepath, "utf8");
   });
 
+  eleventyConfig.addShortcode("woodcut", function(filename, alt = "", classes = "") {
+    const src = `/assets/${filename}`;
+    return `<div class="woodcut-frame${classes ? ` ${classes}` : ""}"><img class="woodcut" src="${src}" alt="${alt}"></div>`;
+  });
+
   return {
     dir: {
       input: "source",
