@@ -2,6 +2,6 @@
 layout: article.njk
 ---
 
-# Imbas Hard Tech
+# {{ site.title }}
 
 {% woodcut "full-adder.png" %}

@@ -1,11 +1,16 @@
 header {
-	margin: 1em auto;
+	margin: 1em auto 2em auto;
 	max-width: 800px;
 	padding: 0 2em;
 }
 
 .header-logo {
 	margin: 0 1em;
+}
+
+.header-logo > * {
+	min-height: 2em;
+	min-width: 2em;
 }
 
 .header-title {
