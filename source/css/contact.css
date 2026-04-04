@@ -1,0 +1,52 @@
+.contact-form {
+	border: 1px solid var(--off-black);
+	border-radius: 3px;
+	padding: 28px;
+	position: relative;
+}
+
+.email-fallback {
+	align-items: baseline;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.email-field {
+	width: 100%;
+}
+
+.email-field > input {
+	border: none;
+	border-bottom: 1px solid black;
+	border-radius: 0;
+	flex-grow: 3;
+}
+
+.email-field > input:focus {
+	outline: none;
+}
+
+.or {
+	align-items: center;
+	color: var(--off-black);
+	display: flex;
+	font-size: 0.8em;
+	gap: 16px;
+	margin-top: 32px;
+	text-transform: uppercase;
+}
+
+.or::before, .or::after {
+	background: var(--off-black);
+	content: '';
+	flex: 1;
+	height: 1px;
+}
+
+.red-button {
+	background-color: var(--red-type);
+	border: 1px solid var(--red-type);
+	border-radius: 4px;
+	color: var(--off-white);
+}
