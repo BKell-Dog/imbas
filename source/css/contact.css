@@ -5,6 +5,14 @@
 	position: relative;
 }
 
+.contact-form > textarea {
+	min-height: 6em;
+}
+
+.contact-form > textarea:focus {
+	outline: none;
+}
+
 .email-fallback {
 	align-items: baseline;
 	display: flex;
@@ -27,13 +35,17 @@
 	outline: none;
 }
 
+.email-row {
+	margin-top: 0.75em;
+}
+
 .or {
 	align-items: center;
 	color: var(--off-black);
 	display: flex;
 	font-size: 0.8em;
 	gap: 16px;
-	margin-top: 32px;
+	margin: 32px 0 24px 0;
 	text-transform: uppercase;
 }
 

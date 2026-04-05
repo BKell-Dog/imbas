@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const markdownIt = require("markdown-it");
+const md = new markdownIt();
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "source/assets": "assets" });
