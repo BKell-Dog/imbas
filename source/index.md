@@ -14,7 +14,7 @@ Or if you're already building a product and you've *hit a roadblock*, you have *
 
 ## How We Can Help You
 
-When you need a hardware specialist, when your deadlines feel suffocating and you *need extra hands*, when you're planning out core architecture, and when you need an *informed second opinion*, we'll have your back.
+When you need a hardware specialist, when your deadlines feel suffocating and you *need extra hands*, when you're planning out core architecture, when you need an *informed second opinion*, that's exactly when we can give you relief.
 
 
 
@@ -22,7 +22,7 @@ When you need a hardware specialist, when your deadlines feel suffocating and yo
 
 Our team is experienced in *connected hardware and wireless systems*, like antenna design, Wifi & Bluetooth devices, and CAN bus architecture. Most teams can get a barebones wireless device running easily, but does your device hold up *under stress*? Are you attempting the herculean task of cell network integration or FCC certification? *We can guide you through it*, from home Wifi prototyping to field test validation.
 
-Our goal is your device working everywhere, not just in the office or in the lab. We strive to build devices that work *as the customers use them* and wherever the customers are.
+Our goal is your device working everywhere, not just in the office or in the lab, working *as the customers use them* and wherever the customers are.
 
 {% woodcut "smith-chart.svg" "scale(1.7) skewy(2deg) translateX(-55px) translateY(-100px);" %}
 

@@ -109,7 +109,7 @@ textarea {
 .woodcut-frame {
 	border: 1.5px solid var(--off-black);
 	height: auto;
-	margin: 1em 0;
+	margin: 1em 0 2em 0;
 	max-height: 150px;
 	overflow: hidden;
 	width: 100%;
