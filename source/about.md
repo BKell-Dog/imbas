@@ -13,3 +13,5 @@ Our thesis is that *beautiful engineering* originates in the same part of the mi
 ## Let's Keep Talking
 
 {% include "components/contact.njk" %}
+
+Our members can do all types of hardware engineering, but specialize in *RF and digital communications* systems like TCP/IP, Bluetooth and Wifi for IoT, ultra-wideband sensors, or cell carrier connectivity.

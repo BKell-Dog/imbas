@@ -12,7 +12,6 @@
   "navLinks": [
     { "text": "Home", "url": "/" },
     { "text": "About", "url": "/about/" },
-    { "text": "Services", "url": "/services/" },
     { "text": "Contact", "url": "/#contact-form" }
   ],
   "currentYear": 2026

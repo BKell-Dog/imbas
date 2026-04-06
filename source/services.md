@@ -1,5 +1,0 @@
----
-layout: article.njk
----
-
-services
