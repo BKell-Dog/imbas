@@ -1,8 +1,24 @@
 ---
 layout: article.njk
 title: Lossless Diode Switch in RF Filter
+image: "VSWR.webp"
+imageTransform: "scale(0.9) translateY(-220px);"
 ---
 
 ### Lossless Diode Switch in RF Filter
 
-Work for a client that made radios for military aircraft. I can't say much due to the defense industry's NDAs, but I can tell you that the tier-1 supplier sent back this RF filter since it was too noisy. The company (tier-2) identified the failure point, and gave us the task of designing and validating a new DC-biased diode switch inside their filter.
+Our client made radios for military aircraft. For that reason, I won't go into details beyond this: the tier-1 supplier sent back an RF anti-jamming filter since *it was too noisy*. My client (tier-2) identified the failure point, and gave us the task of designing and validating a new DC-biased diode switch inside their filter.
+
+A large and understated part of this project was sourcing the *military-grade components* that would be necessary for this system to work: our requirements for noise, weight, and cost were very tight. High frequency noise was our biggest constraint, since signals had to pass through the filter *losslessly* while blocking outside interference.
+
+Regular electronics vendors had failed our client in the first place, and we had to source from a scientific components company for extremely low-loss and impedance matched diodes, inductors, connectors, &c. 
+
+{% woodcut "VSWR.webp" "scale(0.9) translateY(-220px);" %}
+
+We had to test these components very precisely as well, there had to be no sign of the signal losses that the tier-1 had identified. We soldered the components on in-house, we put the new filter under a *series of RF stress tests* and tests designed to compare the noise floor of a clean sample signal to one originating in an already-noisy environment.
+
+Our new filter passed these tests beautifully to our and our client's satisfaction. The client ordered parts for our filter in production quantity and is using them today.
+
+## We Can Do Similar Work For You
+
+{% include "components/contact.njk" %}

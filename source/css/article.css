@@ -23,6 +23,12 @@ h3 {
 }
 
 p {
-	margin: 0.5em 0;
+	margin: 1em 0;
 	text-align: justify;
+}
+
+@media (max-width: 550px) {
+	article {
+		margin: 0 1em;
+	}
 }

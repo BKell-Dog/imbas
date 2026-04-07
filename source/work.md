@@ -5,9 +5,13 @@ permalink: /work/
 
 ### Our Track Record
 
-Here you'll find a small sample of work we've done for previous clients.
+Here you'll find a few accounts of some sample work we've done in the past.
 
 {%- for item in collections.work | sort(false, false, 'data.title') %}
-<br>
-<a href="{{ item.url }}">{{ item.data.title }}</a>
+{% if item.data.image %}
+<h2>{{ item.data.title }}</h2>
+<a href="{{ item.url }}">
+	{% woodcut item.data.image item.data.imageTransform item.data.mobileImageTransform %}
+</a>
+{% endif %}
 {%- endfor %}

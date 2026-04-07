@@ -12,6 +12,7 @@
   "navLinks": [
     { "text": "Home", "url": "/" },
     { "text": "About", "url": "/about/" },
+    { "text": "Our Work", "url": "/work/" },
     { "text": "Contact", "url": "/#contact-form" }
   ]
 }
