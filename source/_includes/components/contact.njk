@@ -1,21 +1,66 @@
 <div class="contact-form" id="contact-form">
   <link rel="stylesheet" href="/css/contact.css">
   <label for="project">What are you building?</label>
-  <textarea id="project" rows="3"></textarea>
+  <textarea id="project" name="message" rows="3"></textarea>
 
   <div class="email-row flex-row gap-10">
     <div class="email-field flex-row">
-      X &nbsp; <input type="email" id="email" class="email-input" placeholder="Your email" autocomplete="email">
+      X &nbsp; <input type="email" id="email" name="email" class="email-input"
+                placeholder="Your email" autocomplete="email">
     </div>
-    <button class="submit-btn red-button">Send</button>
+    <button class="submit-btn red-button" id="submit-btn">Send</button>
   </div>
-  
+
+  <p id="form-status" aria-live="polite"></p>
+
   <div class="or">or</div>
 
   <div class="email-fallback flex-column">
     <span class="align-self-left">Write to our point of contact directly,</span>
     <a href="mailto:{{ site.email }}" class="align-self-center">will@imbashardtech.com</a>
-    <!-- <a href="tel:{{ site.phone }}" class="align-self-center">(901) 231-5549</a> -->
     <span class="align-self-right">We read and respond to every email.</span>
   </div>
 </div>
+
+<script>
+  document.getElementById('submit-btn').addEventListener('click', async () => {
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('project').value.trim();
+    const status = document.getElementById('form-status');
+    const btn = document.getElementById('submit-btn');
+
+    // Client-side guard
+    if (!email || !message) {
+      status.textContent = 'Please fill in both fields.';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    status.textContent = '';
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, message })
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        status.textContent = 'Sent. We\'ll be in touch.';
+        document.getElementById('email').value = '';
+        document.getElementById('project').value = '';
+      } else {
+        status.textContent = data.error || 'Something went wrong. Try the email link below.';
+        btn.disabled = false;
+        btn.textContent = 'Send';
+      }
+    } catch {
+      status.textContent = 'Network error. Try the email link below.';
+      btn.disabled = false;
+      btn.textContent = 'Send';
+    }
+  });
+</script>
