@@ -50,15 +50,19 @@
 
       if (res.ok) {
         status.textContent = 'Sent. We\'ll be in touch.';
+        btn.disabled = false;
+        btn.textContent = 'Send';
         document.getElementById('email').value = '';
         document.getElementById('project').value = '';
       } else {
         status.textContent = data.error || 'Something went wrong. Try the email link below.';
+        status.style.color = "#c8392b";
         btn.disabled = false;
         btn.textContent = 'Send';
       }
     } catch {
       status.textContent = 'Network error. Try the email link below.';
+      status.style.color = "#c8392b";
       btn.disabled = false;
       btn.textContent = 'Send';
     }

@@ -3,7 +3,6 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async (req) => {
-  // Only allow POST
   if (req.method !== 'POST') {
     return new Response(JSON.stringify({ error: 'Method not allowed' }), {
       status: 405,
@@ -21,7 +20,6 @@ export default async (req) => {
     });
   }
 
-  // Basic validation
   if (!email || !message) {
     return new Response(JSON.stringify({ error: 'Email and message are required' }), {
       status: 400,
@@ -38,19 +36,31 @@ export default async (req) => {
   }
 
   try {
-    await resend.emails.send({
-      from: 'contact@imbashardtech.com',
+    console.log('[contact] Attempting to send email', { to: 'will@imbashardtech.com', from: 'hello@imbashardtech.com', replyTo: email });
+
+    const result = await resend.emails.send({
+      from: 'hello@imbashardtech.com',
       to: 'will@imbashardtech.com',
       subject: `New inquiry from ${email}`,
       html: `<p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong><br>${message}</p>`
     });
+
+    console.log('[contact] Resend response:', JSON.stringify(result));
+
+    if (result.error) {
+      console.error('[contact] Resend returned an error:', JSON.stringify(result.error));
+      return new Response(JSON.stringify({ error: 'Failed to send email' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
 
     return new Response(JSON.stringify({ ok: true }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }
     });
   } catch (err) {
-    console.error('Resend error:', err);
+    console.error('[contact] Unexpected error:', err.message, err.stack);
     return new Response(JSON.stringify({ error: 'Failed to send email' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }

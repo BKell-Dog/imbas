@@ -62,3 +62,7 @@
 	border-radius: 4px;
 	color: var(--off-white);
 }
+
+#form-status {
+	text-align: end;
+}
