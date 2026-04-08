@@ -5,7 +5,7 @@ permalink: /work/
 
 ### Our Track Record
 
-Here you'll find a few case studies of work we've done in the past.
+Here you'll find a few case studies of work we've done in the past, anonymized for our clients' privacy.
 
 {%- for item in collections.work | sort(false, false, 'data.title') %}
 {% if item.data.image %}

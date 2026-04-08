@@ -7,6 +7,10 @@ header {
 	padding: 0 2em;
 }
 
+.header-left:focus {
+	outline: none;
+}
+
 .header-logo {
 	margin: 0 1em;
 }
@@ -14,6 +18,10 @@ header {
 .header-logo > * {
 	min-height: 2em;
 	min-width: 2em;
+}
+
+.header-logo:focus, .header-logo > *:focus {
+	outline: none;
 }
 
 .header-title {
