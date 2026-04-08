@@ -5,7 +5,7 @@ permalink: /work/
 
 ### Our Track Record
 
-Here you'll find a few accounts of some sample work we've done in the past.
+Here you'll find a few case studies of work we've done in the past.
 
 {%- for item in collections.work | sort(false, false, 'data.title') %}
 {% if item.data.image %}

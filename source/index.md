@@ -16,7 +16,7 @@ Or if you're already building a product and you've *hit a roadblock*, you have *
 
 Our team can jump in on any stage of the engineering process to either guide you through a specialized stage or work alongside you to see the project through.
 
-When you need a hardware specialist, when your deadlines feel suffocating and you *need extra hands*, when you're planning out core architecture, when you need an *informed second opinion*, that's exactly when you should [call us in](/#contact-form).
+When you need a hardware specialist, when your deadlines feel suffocating and you *need extra hands*, when you're planning out core architecture, when you need an *informed second opinion*, that's exactly when you should [call on us](/#contact-form).
 
 
 ## Our Speciality
@@ -31,7 +31,7 @@ Our goal is your device working everywhere, not just in the office or the lab, w
 
 If your team has features left hanging with *no clear ownership*, we take ownership. If you've hired other contractors who *leave you in the dark*, we overcommunicate. Where others might deliver *a subsystem and no more*, we dig deep into your device architecture to ensure our work meshes perfectly and delivers value.
 
-If you trust us with your company's future, we'll be equally invested in your success. Our ethos is one of *honor*, responsibility, sincerity, and doing things *the right way*, the first time. We hope you feel the same.
+When a client trusts us with their company's future, we become equally invested in their success. Our ethos is one of *honor*, responsibility, sincerity, and doing things *the right way*, the first time. We hope you feel the same.
 
 ## Talk To Us
 
