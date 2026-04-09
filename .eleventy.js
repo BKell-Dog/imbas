@@ -14,9 +14,9 @@ module.exports = function (eleventyConfig) {
     return fs.readFileSync(filepath, "utf8");
   });
 
-  eleventyConfig.addShortcode("woodcut", function(filename, transform="", classes = "") {
+  eleventyConfig.addShortcode("woodcut", function(filename, transform="") {
     const src = `/assets/${filename}`;
-    return `<div class="woodcut-frame${classes ? ` ${classes}` : ""}"><img class="woodcut" src="${src}" style="transform: ${transform}"></div>`;
+    return `<div class="woodcut-frame"><img class="woodcut" src="${src}" style="transform: ${transform}"></div>`;
   });
 
   return {
@@ -26,6 +26,7 @@ module.exports = function (eleventyConfig) {
       layouts: "_includes/layouts",
       output: "public",
     },
+    markdownTemplateEngine: "njk",
     passthroughFileCopy: true,
   };
 };

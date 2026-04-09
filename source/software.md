@@ -2,8 +2,13 @@
 layout: article.njk
 ---
 
-## Bespoke Business Software
+### Bespoke Business Software
 
-{{ site.title }}'s main focus is electronics hardware. However we can also build *custom business software* tailored to your company, since we code most of our own internal tools. We prioritize *speed, simplicity, and security* above all things: a software should never do more than what we want it to do; what you want it to do, it should do excellently.
+The engineers at {{ site.title }} build most of their own productivity tools—that means they can do the same for you, and build *custom business software* tailored to your company! We prioritize *speed, simplicity, and security* above all things: a software should never be bloated; it should do its job excellently and stay out of your way otherwise.
 
-If you're *unsatisfied with the software you pay for* (and you're probably paying too much!), talk to us, we can write you new, bespoke software to suit your business flow.
+If you're *unsatisfied with the software you pay for* (and you're probably paying too much!) then talk to us, we can write you new, bespoke software to suit your business flow.
+
+## Let's Talk More About It
+
+{% set contactLabel = "What Do You Need Help Automating?" %}
+{% include "components/contact.njk" %}

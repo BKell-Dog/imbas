@@ -10,7 +10,7 @@ The engineers at {{ site.title }} will work with you to get your product from co
 
 Or if you're already building a product and you've *hit a roadblock*, you have *too few engineers*, or systems *too abstract* for your team, we'll take the hardware problems off your plate.
 
-{% woodcut "full-adder.png" "scale(1.3) skewX(-8deg) skewY(3deg) translateY(23px);" %}
+{% woodcut "full-adder.png", "scale(1.3) skewX(-8deg) skewY(3deg) translateY(23px);" %}
 
 ## How We Can Help You
 
@@ -25,7 +25,7 @@ Our team is experienced in *connected hardware* and wireless systems, like custo
 
 Our goal is your device working everywhere, not just in the office or the lab, working *as the customers use them* and wherever the customers are.
 
-{% woodcut "smith-chart.svg" "scale(1.7) skewy(2deg) translateX(-55px) translateY(-100px);" %}
+{% woodcut "smith-chart.svg", "scale(1.7) skewy(2deg) translateX(-55px) translateY(-100px);" %}
 
 ## What Working Together Looks Like
 

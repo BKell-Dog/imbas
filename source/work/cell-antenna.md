@@ -11,7 +11,7 @@ This client was a cell antenna company that had just won a contract to deploy ne
 
 We designed the system's 4x8 *beamformer and power divider* which sits between the radio and the antenna. This subsystem, like many others, is vital to the phased array behavior used heavily in new *5G-capable antennas*. It takes in a phased signal, divides it into multiple output paths, applies phase delays, and feeds into the antenna element.
 
-{% woodcut "phased-array.svg" "scaleX(1) scaleY(0.9) skewX(-4deg) skewY(3deg) translateX(-10px) translateY(-230px);" %}
+{% woodcut "phased-array.svg", "scaleX(1) scaleY(0.9) skewX(-4deg) skewY(3deg) translateX(-10px) translateY(-230px);" %}
 
 These technologies are well-established: we didn't have to invent anything new yet the finished PCB had to be *highly precise*. It takes a team of experts to ensure that every aspect of the beamformer would work perfectly. We designed the beamformer with four [rat-race couplers](https://www.microwaves101.com/encyclopedias/rat-race-couplers), drew the PCB using the industry's [microstrip equations](https://www.microwaves101.com/encyclopedias/microstrip), ordered it to be printed, and used a 16-port [vector network analyzer](https://www.tek.com/en/documents/primer/what-vector-network-analyzer-and-how-does-it-work) to *test the system* meticulously.
 

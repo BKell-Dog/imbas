@@ -13,7 +13,7 @@ A large and understated part of this project was sourcing the *military-grade co
 
 Regular electronics vendors had failed our client on the first try, and we had to source from a scientific components company for extremely low-loss and impedance matched diodes, inductors, connectors, &c.
 
-{% woodcut "VSWR.webp" "scale(0.9) translateY(-220px);" %}
+{% woodcut "VSWR.webp", "scale(0.9) translateY(-220px);" %}
 
 We had to test these components very precisely as well, there had to be no sign of the signal losses that the tier-1 had identified. We soldered the components on in-house, we put the new filter under a *series of RF stress tests* and tests designed to compare the noise floor of a clean sample signal to one originating in an already-noisy environment.
 
