@@ -1,5 +1,5 @@
 ---
-layout: article.njk
+layout: work.njk
 title: The Dream Timer
 image: "pcb.webp"
 imageTransform: "translateY(-50px)"

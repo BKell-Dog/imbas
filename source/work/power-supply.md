@@ -1,5 +1,5 @@
 ---
-layout: article.njk
+layout: work.njk
 title: Medical Device Power Supply
 image: "power-supply.png"
 imageTransform: "translateY(-60px) skew(2deg)"

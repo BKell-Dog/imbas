@@ -15,3 +15,9 @@ Here you'll find a few case studies of work we've done in the past.
 </a>
 {% endif %}
 {% endfor %}
+
+---
+
+<style>p>a{text-decoration: underline;}</style>
+
+Not a hardware project? We also [help small businesses](/business/) identify and adopt the right technology for their workflow.

@@ -1,5 +1,5 @@
 ---
-layout: article.njk
+layout: work.njk
 title: Cell Antenna Beamformer
 image: "phased-array.svg"
 imageTransform: "scaleX(1) scaleY(0.9) skewX(-4deg) skewY(3deg) translateX(-10px) translateY(-230px);"

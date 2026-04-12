@@ -18,6 +18,25 @@ module.exports = function (eleventyConfig) {
     const src = `/assets/${filename}`;
     return `<div class="woodcut-frame"><img class="woodcut" src="${src}" style="transform: ${transform}"></div>`;
   });
+  
+  eleventyConfig.addFilter("formatPhoneNumber", (phone) => {
+    // Strip everything except digits and leading +
+    const digits = phone.replace(/[^\d]/g, "");
+
+    // Normalize to 11 digits (add leading 1 if 10-digit US number)
+    const normalized = digits.length === 10 ? "1" + digits : digits;
+
+    if (normalized.length !== 11 || normalized[0] !== "1") {
+      throw new Error(`Unsupported phone number format: ${phone}`);
+    }
+
+    const country = normalized[0];
+    const area = normalized.slice(1, 4);
+    const exchange = normalized.slice(4, 7);
+    const subscriber = normalized.slice(7, 11);
+
+    return `+${country} (${area}) ${exchange}-${subscriber}`;
+  });
 
   return {
     dir: {

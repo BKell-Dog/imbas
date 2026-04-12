@@ -1,5 +1,5 @@
 ---
-layout: article.njk
+layout: work.njk
 title: Lossless Diode Switch in RF Filter
 image: "VSWR.webp"
 imageTransform: "scale(0.9) translateY(-220px);"
@@ -11,7 +11,7 @@ This client makes radios for military aircraft. For that reason, we can't go int
 
 A large and understated part of this project was sourcing the *military-grade components* that would be necessary to meet the rigorous standards: our requirements for noise, weight, and cost were very tight. Blocking high frequency noise was naturally our toughest constraint, since radio signals had to pass through the filter *losslessly* while blocking outside interference.
 
-Regular electronics vendors failed our client on the first try, and we had to source from a scientific components company for extremely low-loss and impedance matched diodes, inductors, connectors, &c.
+Regular electronics vendors failed our client on the first try, and we had to source from a scientific components company for extremely low-loss and impedance matched diodes, inductors, connectors, etc.
 
 {% woodcut "VSWR.webp", "scale(0.9) translateY(-220px);" %}
 

@@ -1,0 +1,11 @@
+{% extends "layouts/article.njk" %}
+
+{% block body %}
+	{%  include 'components/header.njk' %}
+	<article>
+		{{ content | safe}}
+		<br>
+		<a href="/work/">← Back to Our Work</a>
+	</article>
+	{%  include 'components/footer.njk' %}
+{% endblock %}

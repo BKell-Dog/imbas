@@ -4,10 +4,10 @@ layout: article.njk
 
 <h3>Email, Call, or Text</h3>
 
-<p>We're always happy to talk, about hiring us, brainstorming solutions, or just to chat about the state of the tech industry.</p>
+<p>Even if we're not the right fit, we're happy to help you think through a problem. <em>So let's talk</em>, about hiring us, brainstorming solutions, or just to chat about the state of the tech industry.</p>
 
 <link rel="stylesheet" href="/css/contact.css">
-<textarea id="project-description" name="message" rows="3"></textarea>
+<textarea id="project-description" name="message" rows="3" placeholder="Write us a message..."></textarea>
 
 <div class="email-row flex-row gap-10">
 	<div class="email-field flex-row">
@@ -25,8 +25,8 @@ layout: article.njk
 	<span class="align-self-left">Talk to our point of contact directly,</span>
 	<!-- <p class="align-self-center" style="margin: 0">{{ site.author }}</p> -->
 	<a href="mailto:{{ site.email }}" class="align-self-center">{{ site.email }}</a>
-	<a href="tel:{{ site.phone }}" class="align-self-center">{{  site.phone }}</a>
-	<span class="align-self-right">We try to response as quickly as we can.</span>
+	<a href="tel:{{ site.phone }}" class="align-self-center">{{ site.phone | formatPhoneNumber }}</a>
+	<span class="align-self-right">We respond as quickly as possible.</span>
 </div>
 
 <script src="/scripts/submitEmail.js"></script>
