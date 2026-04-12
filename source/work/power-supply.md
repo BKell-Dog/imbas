@@ -1,11 +1,12 @@
 ---
 layout: work.njk
-title: Medical Device Power Supply
+title: Medical Headset Power Supply
 image: "power-supply.png"
 imageTransform: "translateY(-60px) skew(2deg)"
+next: "diode-switch"
 ---
 
-### Medical Device Power Supply
+### Medical Headset Power Supply
 
 We partnered with a *pre-seed startup* to help build part of their medical device, and ended up *redefining the architecture* before we ever prototyped. They had a founding engineer who needed to focus on the delicate medical sensors and microcontroller, and we were to handle the *power supply and battery*. This device was a type of headset that made sensitive measurements on something in the eye (don't ask us what exactly it did, we're engineers not doctors), and would usually sit on a wall mount until the patient put it on.
 

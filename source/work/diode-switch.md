@@ -3,6 +3,7 @@ layout: work.njk
 title: Lossless Diode Switch in RF Filter
 image: "VSWR.webp"
 imageTransform: "scale(0.9) translateY(-220px);"
+next: "dream-timer"
 ---
 
 ### Lossless Diode Switch in RF Filter

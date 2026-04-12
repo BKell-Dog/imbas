@@ -5,7 +5,14 @@
 	<article>
 		{{ content | safe}}
 		<br>
+		{%  if next %}
+		<div class="flex-row justify-between">
+			<a href="/work/">← Back to Our Work</a>
+			<a href="/work/{{ next}}/">Next Case Study →</a>
+		</div>
+		{%  else %}
 		<a href="/work/">← Back to Our Work</a>
+		{%  endif %}
 	</article>
 	{%  include 'components/footer.njk' %}
 {% endblock %}

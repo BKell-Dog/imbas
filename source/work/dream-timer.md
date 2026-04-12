@@ -3,6 +3,7 @@ layout: work.njk
 title: The Dream Timer
 image: "pcb.webp"
 imageTransform: "translateY(-50px)"
+next: "cell-antenna"
 ---
 
 ### The Dream Timer
