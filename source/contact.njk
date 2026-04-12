@@ -1,0 +1,32 @@
+---
+layout: article.njk
+---
+
+<h3>Email, Call, or Text</h3>
+
+<p>We're always happy to talk, about hiring us, brainstorming solutions, or just to chat about the state of the tech industry.</p>
+
+<link rel="stylesheet" href="/css/contact.css">
+<textarea id="project-description" name="message" rows="3"></textarea>
+
+<div class="email-row flex-row gap-10">
+	<div class="email-field flex-row">
+	  X &nbsp; <input type="email" id="email" name="email" class="email-input"
+	            placeholder="Your email" autocomplete="email">
+	</div>
+	<button class="submit-btn red-button" id="submit-btn">Send</button>
+</div>
+
+<p id="form-status" aria-live="polite"></p>
+
+<div class="or">or</div>
+
+<div class="email-fallback flex-column">
+	<span class="align-self-left">Talk to our point of contact directly,</span>
+	<!-- <p class="align-self-center" style="margin: 0">{{ site.author }}</p> -->
+	<a href="mailto:{{ site.email }}" class="align-self-center">{{ site.email }}</a>
+	<a href="tel:{{ site.phone }}" class="align-self-center">{{  site.phone }}</a>
+	<span class="align-self-right">We try to response as quickly as we can.</span>
+</div>
+
+<script src="/scripts/submitEmail.js"></script>

@@ -3,13 +3,13 @@ layout: article.njk
 permalink: /work/
 ---
 
-### Our Track Record
+## Our Track Record
 
 Here you'll find a few case studies of work we've done in the past.
 
 {% for item in collections.work %}
 {% if item.data.image %}
-<h2>{{ item.data.title }}</h2>
+<h3>{{ item.data.title }}</h3>
 <a href="{{ item.url }}">
 	{% woodcut item.data.image, item.data.imageTransform, item.data.mobileImageTransform %}
 </a>

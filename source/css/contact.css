@@ -5,14 +5,6 @@
 	position: relative;
 }
 
-.contact-form > textarea {
-	min-height: 6em;
-}
-
-.contact-form > textarea:focus {
-	outline: none;
-}
-
 .email-fallback {
 	align-items: baseline;
 	display: flex;
@@ -65,4 +57,13 @@
 
 #form-status {
 	text-align: end;
+}
+
+
+#project-description {
+	min-height: 6em;
+}
+
+#project-description:focus {
+	outline: none;
 }

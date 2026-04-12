@@ -7,11 +7,11 @@ imageTransform: "scale(0.9) translateY(-220px);"
 
 ### Lossless Diode Switch in RF Filter
 
-This client makes radios for military aircraft. For that reason, we won't go into details beyond this: the tier-1 supplier sent back an RF anti-jamming filter since *it was too noisy*. My client (tier-2) identified the failure point, and gave us the task of designing and validating a new DC-biased diode switch inside their filter.
+This client makes radios for military aircraft. For that reason, we can't go into details beyond this: the tier-1 supplier sent back an RF anti-jamming filter since *it was too noisy*. Our client (tier-2) identified the failure point, and gave us the task of designing and validating a new DC-biased diode switch inside their filter.
 
-A large and understated part of this project was sourcing the *military-grade components* that would be necessary for this system to work: our requirements for noise, weight, and cost were very tight. High frequency noise was our biggest constraint, since signals had to pass through the filter *losslessly* while blocking outside interference.
+A large and understated part of this project was sourcing the *military-grade components* that would be necessary to meet the rigorous standards: our requirements for noise, weight, and cost were very tight. Blocking high frequency noise was naturally our toughest constraint, since radio signals had to pass through the filter *losslessly* while blocking outside interference.
 
-Regular electronics vendors had failed our client on the first try, and we had to source from a scientific components company for extremely low-loss and impedance matched diodes, inductors, connectors, &c.
+Regular electronics vendors failed our client on the first try, and we had to source from a scientific components company for extremely low-loss and impedance matched diodes, inductors, connectors, &c.
 
 {% woodcut "VSWR.webp", "scale(0.9) translateY(-220px);" %}
 

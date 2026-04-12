@@ -2,7 +2,7 @@
 <div class="contact-form" id="contact-form">
   <link rel="stylesheet" href="/css/contact.css">
   <label for="project">{{ contactLabel }}</label>
-  <textarea id="project" name="message" rows="3"></textarea>
+  <textarea id="project-description" name="message" rows="3"></textarea>
 
   <div class="email-row flex-row gap-10">
     <div class="email-field flex-row">
@@ -23,50 +23,4 @@
   </div>
 </div>
 
-<script>
-  document.getElementById('submit-btn').addEventListener('click', async () => {
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('project').value.trim();
-    const status = document.getElementById('form-status');
-    const btn = document.getElementById('submit-btn');
-
-    // Client-side guard
-    if (!email || !message) {
-      status.textContent = 'Please fill in both fields.';
-      return;
-    }
-
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
-    status.textContent = '';
-
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, message })
-      });
-
-      const data = await res.json();
-
-      if (res.ok) {
-        status.textContent = 'Sent. We\'ll be in touch.';
-        status.style.color = '#3d3d3d';
-        btn.disabled = false;
-        btn.textContent = 'Send';
-        document.getElementById('email').value = '';
-        document.getElementById('project').value = '';
-      } else {
-        status.textContent = data.error || 'Something went wrong. Try the email link below.';
-        status.style.color = "#c8392b";
-        btn.disabled = false;
-        btn.textContent = 'Send';
-      }
-    } catch {
-      status.textContent = 'Network error. Try the email link below.';
-      status.style.color = "#c8392b";
-      btn.disabled = false;
-      btn.textContent = 'Send';
-    }
-  });
-</script>
+<script src="/scripts/submitEmail.js"></script>
