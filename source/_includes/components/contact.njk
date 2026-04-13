@@ -1,5 +1,5 @@
 {% set contactLabel = contactLabel | default("What are you building?") %}
-<div class="contact-form" id="contact-form">
+<div class="contact-form" id="contact-form" data-w3f-key="{{ site.web3formsKey }}">
   <link rel="stylesheet" href="/css/contact.css">
   <label for="project">{{ contactLabel }}</label>
   <textarea id="project-description" name="message" rows="3"></textarea>
