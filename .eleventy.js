@@ -1,13 +1,26 @@
 const fs = require("fs");
 const path = require("path");
 const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
 const md = new markdownIt();
+const makeToc = require("./lib/shortcodes/toc");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "source/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "source/css": "css" });
   eleventyConfig.addPassthroughCopy({ "source/scripts": "scripts" });
   eleventyConfig.addPassthroughCopy({ "source/data": "data"});
+
+  eleventyConfig.amendLibrary("md", (mdLib) =>
+    mdLib.use(markdownItAnchor, {
+      level: [1, 2, 3, 4, 5, 6],
+      slugify: (str) => eleventyConfig.getFilter("slugify")(str),
+    })
+  );
+
+  eleventyConfig.addCollection("guides", function(collectionApi) {
+    return collectionApi.getFilteredByTag("guides")
+  });
 
   eleventyConfig.addShortcode("svg", function(filename) {
     const filepath = path.join(process.cwd(), "source/assets", filename);
@@ -37,6 +50,8 @@ module.exports = function (eleventyConfig) {
 
     return `+${country} (${area}) ${exchange}-${subscriber}`;
   });
+
+  eleventyConfig.addShortcode("toc", makeToc(eleventyConfig.getFilter("slugify")));
 
   return {
     dir: {

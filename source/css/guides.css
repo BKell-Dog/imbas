@@ -1,0 +1,148 @@
+blockquote {
+  margin: .5rem 0;
+  padding: 0.4rem 0 0.4rem 1rem;
+  border-left: 3px solid var(--red-type);
+}
+
+blockquote em {
+	color: var(--off-black);
+}
+
+blockquote p {
+  margin: 0;
+}
+
+em {
+	color: var(--red-type);
+}
+
+p {
+	margin: 1em 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+th,
+td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  border-bottom: 2px solid #c8b9a2; /* heavier rule under header row */
+}
+
+td {
+  border-bottom: 1px solid #e0d8ce;
+}
+
+/* Kill the exterior: no borders on first/last column edges */
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+/* No border on the last row's bottom */
+tr:last-child td {
+  border-bottom: none;
+}
+
+.guide-shell {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 7vw;
+  align-items: start;
+}
+
+.guide-sidebar {
+	padding: .5rem .5rem 0 0;
+	border-right: 1px solid #e0d8ce;
+	position: sticky;
+	top: 4rem;
+	max-height: calc(100vh - 8rem);
+	overflow-y: auto;
+	height: auto;
+
+	/* Making the scrollbar smaller */
+	scrollbar-width: thin;
+  scrollbar-color: var(--light-gray) transparent;
+  -ms-overflow-style: none;
+}
+
+.guide-sidebar__label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 0.75rem;
+}
+
+.guide-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.guide-sidebar ul ul {
+  margin-left: 1em;
+}
+
+.guide-sidebar li + li {
+  margin-top: 0.4rem;
+}
+
+.guide-sidebar a {
+  font-size: 0.9rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.guide-sidebar a.is-active {
+  color: var(--red-type);
+  font-weight: 600;
+}
+
+.guide-content {
+  padding: .5rem 3rem;
+  min-width: 0;
+}
+
+.guide-sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+.guide-sidebar::-webkit-scrollbar-thumb {
+    background: var(--off-black);
+    border-radius: 20px;
+}
+.guide-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.guide-sidebar:hover::-webkit-scrollbar-thumb {
+    background: var(--off-black);
+}
+
+@media (max-width: 700px) {
+  .guide-shell {
+    grid-template-columns: 1fr;
+  }
+	.guide-sidebar {
+		position: static;
+		border-right: none;
+		border-bottom: 1px solid #e0d8ce;
+		max-height: none;
+		overflow-y: visible;
+	}
+}

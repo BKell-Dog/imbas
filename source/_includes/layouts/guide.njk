@@ -1,0 +1,27 @@
+{% extends "layouts/page.njk" %}
+
+{%  block head %}
+<link rel="stylesheet" href="/css/guides.css">
+{%  endblock %}
+
+{% block body %}
+	{%  include 'components/header.njk' %}
+	<div class="guide-shell">
+	  <nav class="guide-sidebar">
+	    <p class="guide-sidebar__label">Guides</p>
+	    {% toc %}
+	  </nav>
+
+	  <article class="guide-content">
+		<a href="/guides/">← Back to Guides</a>
+	    <h1>{{ title }}</h1>
+	    {% if description %}
+	      <p class="guide-content__lede">{{ description }}</p>
+	    {% endif %}
+	    <hr>
+	    {{ content | safe }}
+	  </article>
+	  <script src="/scripts/tocObserver.js"></script>
+	</div>
+	{%  include 'components/footer.njk' %}
+{% endblock %}
